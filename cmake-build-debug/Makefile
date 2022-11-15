@@ -129,6 +129,30 @@ TinyWebServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/build
 .PHONY : TinyWebServer/fast
 
+log/log.o: log/log.cpp.o
+.PHONY : log/log.o
+
+# target to build an object file
+log/log.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/log/log.cpp.o
+.PHONY : log/log.cpp.o
+
+log/log.i: log/log.cpp.i
+.PHONY : log/log.i
+
+# target to preprocess a source file
+log/log.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/log/log.cpp.i
+.PHONY : log/log.cpp.i
+
+log/log.s: log/log.cpp.s
+.PHONY : log/log.s
+
+# target to generate assembly for a file
+log/log.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/log/log.cpp.s
+.PHONY : log/log.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TinyWebServer"
+	@echo "... log/log.o"
+	@echo "... log/log.i"
+	@echo "... log/log.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

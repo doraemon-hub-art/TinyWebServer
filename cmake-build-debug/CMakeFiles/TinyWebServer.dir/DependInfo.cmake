@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/tmp/tmp.OnfxKmkgDM/log/log.cpp" "CMakeFiles/TinyWebServer.dir/log/log.cpp.o" "gcc" "CMakeFiles/TinyWebServer.dir/log/log.cpp.o.d"
   "/tmp/tmp.OnfxKmkgDM/main.cpp" "CMakeFiles/TinyWebServer.dir/main.cpp.o" "gcc" "CMakeFiles/TinyWebServer.dir/main.cpp.o.d"
   )
 

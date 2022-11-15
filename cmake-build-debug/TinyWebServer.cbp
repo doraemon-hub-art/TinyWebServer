@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/log/log.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/log/log.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/main.cpp">
 			<Option target="TinyWebServer"/>
 		</Unit>

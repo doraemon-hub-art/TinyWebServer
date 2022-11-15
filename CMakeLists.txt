@@ -3,4 +3,4 @@ project(TinyWebServer)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(TinyWebServer main.cpp)
+add_executable(TinyWebServer main.cpp log/log.cpp log/log.h)
