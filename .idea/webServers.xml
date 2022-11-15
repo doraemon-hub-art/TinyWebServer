@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="15f5e2e1-bdaa-426f-aa98-2dfc5dffa3b8" name="TinyWebServer" url="http://114.115.249.99">
+        <fileTransfer rootFolder="/home/xuanxuan/coding" accessType="SFTP" host="114.115.249.99" port="22" sshConfigId="0b7050f2-4f0c-4a59-b77d-59c57f394b39" sshConfig="xuanxuan@114.115.249.99:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
