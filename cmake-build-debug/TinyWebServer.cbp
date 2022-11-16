@@ -82,6 +82,27 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/epoller/epoller.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/epoller/epoller.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_conn.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_conn.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/lock/locker.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/lock/locker.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/log/block_queue.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/log/log.cpp">
 			<Option target="TinyWebServer"/>
 		</Unit>
@@ -89,6 +110,12 @@
 			<Option target="TinyWebServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/main.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/server/server.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/server/server.h">
 			<Option target="TinyWebServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/CMakeLists.txt">

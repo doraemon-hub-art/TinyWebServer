@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/TinyWebServer.dir/main.cpp.o CMakeFiles/TinyWebServer.dir/log/log.cpp.o -o TinyWebServer 
+/usr/bin/c++ -g CMakeFiles/TinyWebServer.dir/main.cpp.o CMakeFiles/TinyWebServer.dir/log/log.cpp.o CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.o CMakeFiles/TinyWebServer.dir/server/server.cpp.o CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o -o TinyWebServer 

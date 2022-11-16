@@ -129,6 +129,78 @@ TinyWebServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/build
 .PHONY : TinyWebServer/fast
 
+epoller/epoller.o: epoller/epoller.cpp.o
+.PHONY : epoller/epoller.o
+
+# target to build an object file
+epoller/epoller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.o
+.PHONY : epoller/epoller.cpp.o
+
+epoller/epoller.i: epoller/epoller.cpp.i
+.PHONY : epoller/epoller.i
+
+# target to preprocess a source file
+epoller/epoller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.i
+.PHONY : epoller/epoller.cpp.i
+
+epoller/epoller.s: epoller/epoller.cpp.s
+.PHONY : epoller/epoller.s
+
+# target to generate assembly for a file
+epoller/epoller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.s
+.PHONY : epoller/epoller.cpp.s
+
+http/http_conn.o: http/http_conn.cpp.o
+.PHONY : http/http_conn.o
+
+# target to build an object file
+http/http_conn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o
+.PHONY : http/http_conn.cpp.o
+
+http/http_conn.i: http/http_conn.cpp.i
+.PHONY : http/http_conn.i
+
+# target to preprocess a source file
+http/http_conn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.i
+.PHONY : http/http_conn.cpp.i
+
+http/http_conn.s: http/http_conn.cpp.s
+.PHONY : http/http_conn.s
+
+# target to generate assembly for a file
+http/http_conn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.s
+.PHONY : http/http_conn.cpp.s
+
+lock/locker.o: lock/locker.cpp.o
+.PHONY : lock/locker.o
+
+# target to build an object file
+lock/locker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o
+.PHONY : lock/locker.cpp.o
+
+lock/locker.i: lock/locker.cpp.i
+.PHONY : lock/locker.i
+
+# target to preprocess a source file
+lock/locker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/lock/locker.cpp.i
+.PHONY : lock/locker.cpp.i
+
+lock/locker.s: lock/locker.cpp.s
+.PHONY : lock/locker.s
+
+# target to generate assembly for a file
+lock/locker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/lock/locker.cpp.s
+.PHONY : lock/locker.cpp.s
+
 log/log.o: log/log.cpp.o
 .PHONY : log/log.o
 
@@ -177,6 +249,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+server/server.o: server/server.cpp.o
+.PHONY : server/server.o
+
+# target to build an object file
+server/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/server/server.cpp.o
+.PHONY : server/server.cpp.o
+
+server/server.i: server/server.cpp.i
+.PHONY : server/server.i
+
+# target to preprocess a source file
+server/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/server/server.cpp.i
+.PHONY : server/server.cpp.i
+
+server/server.s: server/server.cpp.s
+.PHONY : server/server.s
+
+# target to generate assembly for a file
+server/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/server/server.cpp.s
+.PHONY : server/server.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +282,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TinyWebServer"
+	@echo "... epoller/epoller.o"
+	@echo "... epoller/epoller.i"
+	@echo "... epoller/epoller.s"
+	@echo "... http/http_conn.o"
+	@echo "... http/http_conn.i"
+	@echo "... http/http_conn.s"
+	@echo "... lock/locker.o"
+	@echo "... lock/locker.i"
+	@echo "... lock/locker.s"
 	@echo "... log/log.o"
 	@echo "... log/log.i"
 	@echo "... log/log.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... server/server.o"
+	@echo "... server/server.i"
+	@echo "... server/server.s"
 .PHONY : help
 
 

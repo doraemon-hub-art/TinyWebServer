@@ -10,5 +10,5 @@ class log {
 
 };
 
-// test
+
 #endif //TINYWEBSERVER_LOG_H
