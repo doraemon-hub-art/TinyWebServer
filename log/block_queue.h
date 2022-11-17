@@ -150,4 +150,11 @@ void block_deque<T>::push_back(const T &item) {
 }
 
 
+
+/*
+ *
+ *            1 0 0 0    16
+ *  0 0 0 0 0   0
+ *
+ * */
 #endif //TINYWEBSERVER_BLOCK_QUEUE_H
