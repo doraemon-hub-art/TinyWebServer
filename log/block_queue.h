@@ -9,6 +9,7 @@
 #include <assert.h>
 #include <sys/time.h>
 #include <condition_variable>
+#include <mutex>
 
 // 阻塞队列
 template<class T>
@@ -77,8 +78,6 @@ private:
 
     // 条件变量-生产者
     std::condition_variable m_cond_producer;
-
-
 };
 
 // 函数实现
@@ -145,16 +144,24 @@ size_t block_deque<T>::capacity() {
 
 template<class T>
 void block_deque<T>::push_back(const T &item) {
-    std::lock_guard<std::mutex>locker(m_mutex);
-    
+    std::unique_lock<std::mutex>locker(m_mutex);
+    while(m_deque.size() >= m_capacity){// 队列中的数量大于允许的最大容量
+        // 先解锁该互斥锁，然后阻塞当前执行线程，之后等待唤醒。
+        m_cond_producer.wait(locker);
+    }
+    m_deque.push_back(item);
+    m_cond_consumer.notify_one();// 唤醒一个等待线程
 }
 
+template<class T>
+void block_deque<T>::push_front(const T &item) {
+    // 同上，只不过将前插入改成了尾插。
+    std::unique_lock<std::mutex>locker(m_mutex);
+    while(m_deque.size() >= m_capacity){
+        m_cond_producer.wait(locker);
+    }
+    m_deque.push_front(item);
+    m_cond_consumer.notify_one();
+}
 
-
-/*
- *
- *            1 0 0 0    16
- *  0 0 0 0 0   0
- *
- * */
 #endif //TINYWEBSERVER_BLOCK_QUEUE_H
