@@ -82,6 +82,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/block_queue/block_queue.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/buffer/buffer.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/buffer/buffer.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/epoller/epoller.cpp">
 			<Option target="TinyWebServer"/>
 		</Unit>
@@ -98,9 +107,6 @@
 			<Option target="TinyWebServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/lock/locker.h">
-			<Option target="TinyWebServer"/>
-		</Unit>
-		<Unit filename="/tmp/tmp.OnfxKmkgDM/log/block_queue.h">
 			<Option target="TinyWebServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/log/log.cpp">

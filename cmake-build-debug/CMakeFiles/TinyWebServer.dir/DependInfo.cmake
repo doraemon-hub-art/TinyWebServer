@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/tmp/tmp.OnfxKmkgDM/buffer/buffer.cpp" "CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o" "gcc" "CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o.d"
   "/tmp/tmp.OnfxKmkgDM/epoller/epoller.cpp" "CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.o" "gcc" "CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.o.d"
   "/tmp/tmp.OnfxKmkgDM/http/http_conn.cpp" "CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o" "gcc" "CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o.d"
   "/tmp/tmp.OnfxKmkgDM/lock/locker.cpp" "CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o" "gcc" "CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o.d"

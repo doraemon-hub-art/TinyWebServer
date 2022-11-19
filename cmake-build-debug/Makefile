@@ -129,6 +129,30 @@ TinyWebServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/build
 .PHONY : TinyWebServer/fast
 
+buffer/buffer.o: buffer/buffer.cpp.o
+.PHONY : buffer/buffer.o
+
+# target to build an object file
+buffer/buffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o
+.PHONY : buffer/buffer.cpp.o
+
+buffer/buffer.i: buffer/buffer.cpp.i
+.PHONY : buffer/buffer.i
+
+# target to preprocess a source file
+buffer/buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.i
+.PHONY : buffer/buffer.cpp.i
+
+buffer/buffer.s: buffer/buffer.cpp.s
+.PHONY : buffer/buffer.s
+
+# target to generate assembly for a file
+buffer/buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.s
+.PHONY : buffer/buffer.cpp.s
+
 epoller/epoller.o: epoller/epoller.cpp.o
 .PHONY : epoller/epoller.o
 
@@ -282,6 +306,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TinyWebServer"
+	@echo "... buffer/buffer.o"
+	@echo "... buffer/buffer.i"
+	@echo "... buffer/buffer.s"
 	@echo "... epoller/epoller.o"
 	@echo "... epoller/epoller.i"
 	@echo "... epoller/epoller.s"

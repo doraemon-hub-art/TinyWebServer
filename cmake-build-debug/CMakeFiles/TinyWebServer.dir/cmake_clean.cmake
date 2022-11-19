@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o"
+  "CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o.d"
   "CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.o"
   "CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.o.d"
   "CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o"
