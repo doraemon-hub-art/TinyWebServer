@@ -53,10 +53,10 @@ class block_deque{
     // 弹出队头元素，保存到item中
     bool pop(T &item);
 
-    //
+    // 弹出队头元素，增加等待时间选项。
     bool pop(T &item,int timeout);
 
-    //
+    // 唤醒一个消费者等待线程
     void flush();
 
 private:
@@ -102,14 +102,14 @@ void block_deque<T>::close() {
         m_deque.clear(); // 清空
         m_is_close = true;// 关闭
     }
-    // 唤醒所有等待线程
+    // 唤醒所有等待线程，消费者&生产者
     m_cond_producer.notify_all();
     m_cond_consumer.notify_all();
 }
 
 template<class T>
 void block_deque<T>::flush() {
-
+    m_cond_consumer.notify_one();// 唤醒一个消费者线程
 }
 
 template<class T>
@@ -150,18 +150,71 @@ void block_deque<T>::push_back(const T &item) {
         m_cond_producer.wait(locker);
     }
     m_deque.push_back(item);
-    m_cond_consumer.notify_one();// 唤醒一个等待线程
+    m_cond_consumer.notify_one();// 唤醒一个消费者等待线程
 }
 
 template<class T>
 void block_deque<T>::push_front(const T &item) {
-    // 同上，只不过将前插入改成了尾插。
+    // 同上，只不过将尾插改成了前插。
     std::unique_lock<std::mutex>locker(m_mutex);
     while(m_deque.size() >= m_capacity){
         m_cond_producer.wait(locker);
     }
     m_deque.push_front(item);
-    m_cond_consumer.notify_one();
+    m_cond_consumer.notify_one();// 唤醒一个消费者线程
+}
+
+template<class T>
+bool block_deque<T>::empty() {
+    std::lock_guard<std::mutex>locker(m_mutex);
+    if(m_deque.empty()){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+template<class T>
+bool block_deque<T>::full() {
+    std::lock_guard<std::mutex>locker(m_mutex);
+    if(m_deque.size() >= m_capacity){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+template<class T>
+bool block_deque<T>::pop(T &item) {
+    std::unique_lock<std::mutex>locker(m_mutex);
+    while(m_deque.empty()){// 空的,空队列无法pop
+        m_cond_consumer.wait(locker);
+        if(m_is_close){
+            return false;
+        }
+    }
+    item = m_deque.front();
+    m_deque.pop_front();
+    m_cond_producer.notify_one();// 唤醒一个生产者等待线程
+    return true;
+}
+
+template<class T>
+bool block_deque<T>::pop(T &item, int timeout) {
+    std::unique_lock<std::mutex>locker(m_mutex);
+    while(m_deque.empty()){// 空的，空队列，无法pop
+        // 等待timeout
+        if(m_cond_consumer.wait_for(locker,std::chrono::seconds(timeout)) == std::cv_status::timeout){
+            return false;
+        }
+        if(m_is_close){
+            return false;
+        }
+    }
+    item = m_deque.front();
+    m_deque.pop();
+    m_cond_producer.notify_one();// 唤醒一个生产者等待线程
+    return  true;
 }
 
 #endif //TINYWEBSERVER_BLOCK_QUEUE_H
