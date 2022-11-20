@@ -214,7 +214,7 @@ bool block_deque<T>::pop(T &item, int timeout) {
         }
     }
     item = m_deque.front();
-    m_deque.pop();
+    m_deque.pop_front();
     m_cond_producer.notify_one();// 唤醒一个生产者等待线程
     return  true;
 }
