@@ -14,6 +14,8 @@
 // 阻塞队列
 template<class T>
 class block_deque{
+
+public:
     // 初始化，默认最大长度为1000
     explicit block_deque(size_t max_capacity = 1000);
 

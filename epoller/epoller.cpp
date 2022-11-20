@@ -56,7 +56,7 @@ bool epoller::del_fd(int fd) {
 }
 
 int epoller::wait(int timeout) {
-    // 注意: vector创建的数组，不能像普通数组那样传首地址进去。
+    // 注意: vector创建的数组，不能像普通数组那样传首地址进去。这里要传第一个元素地址。
     if(epoll_wait(m_epoll_fd,&m_events[0],static_cast<int>(m_events.size()),timeout)){
         return true;
     }else{
@@ -65,12 +65,12 @@ int epoller::wait(int timeout) {
 }
 
 int epoller::get_event_fd(size_t index) const {
-    assert(i >= 0 && i < m_events.size());// 检查下标是否合法
+    assert(index >= 0 && index < m_events.size());// 检查下标是否合法
     return m_events[index].data.fd;
 }
 
 uint32_t epoller::get_event(size_t index) const {
-    assert(index >=0 && i < m_events.size());// 检查下标是否合法
+    assert(index >=0 && index < m_events.size());// 检查下标是否合法
     return  m_events[index].events;
 }
 

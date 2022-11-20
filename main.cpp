@@ -1,5 +1,6 @@
 #include <iostream>
 #include "epoller/epoller.h"
+#include "log/log.h"
 
 // test头文件
 //#include <stdio.h>
@@ -30,13 +31,7 @@ int main() {
     bool log_switch = true; // 日志开关
     int log_block_queue = 1024; // 日志阻塞队列容量
 
-    epoller* epoller_ = new epoller();
 
-    bool is_start = true;
-    while(is_start){
-        int nums = epoller_->wait();
-    }
 
-    delete epoller_;
     return 0;
 }
