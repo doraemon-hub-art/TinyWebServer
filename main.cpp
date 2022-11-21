@@ -31,7 +31,13 @@ int main() {
     bool log_switch = true; // 日志开关
     int log_block_queue = 1024; // 日志阻塞队列容量
 
-
-
+    // 吃完饭洗完衣服回来测试
+    // 开始测试
+    // 开始代码报了个错，检查了已经歇写了的几个类。
+    //log* log_test = log::instance();
+    //log_test->init(1);
+    log::instance()->init(1, "./log_file", ".log", 1024);
+    LOG_INFO("========== Server init ==========");
+    LOG_INFO("========== Server end ==========");
     return 0;
 }

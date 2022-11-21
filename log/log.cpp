@@ -18,11 +18,13 @@ log::~log() {
         while(!m_deque->empty()){// 不为空
             m_deque->flush();
         }
-        if(m_fp){
-            std::lock_guard<std::mutex>locker(m_mutex);
-            flush();
-            fclose(m_fp);// 关闭流
-        }
+        m_deque->close();
+        m_write_thread->join();
+    }
+    if(m_fp){
+        std::lock_guard<std::mutex>locker(m_mutex);
+        flush();
+        fclose(m_fp);// 关闭流
     }
 }
 
@@ -44,8 +46,8 @@ void log::init(int level = 1, const char *path, const char *suffix, int max_queu
 
     m_is_open = true;// 开启标志设置true
     m_level = level;
-    if(max_queue_capacity > 0){// 合法的队列容量
-        m_is_async = true;
+    if(max_queue_capacity > 0){// 合法的队列容量，开启阻塞队列，说明使用异步写入。
+        m_is_async = true;//
         if(!m_deque){// 阻塞队列类还未定义
             // 注意这里的创建方法，unique_ptr的构造方法，必须使用直接初始化的方式。explicit
             // 产生一个左值？
@@ -142,6 +144,7 @@ void log::write(int level, const char *format, ...) {
                          t.tm_min,
                          t.tm_sec,
                          now.tv_usec);
+
         m_buffer.has_written(n);
         append_log_level_title(level);// 添加前缀
 
@@ -152,6 +155,7 @@ void log::write(int level, const char *format, ...) {
         m_buffer.has_written(m);
         m_buffer.append("\n\0",2);
 
+        //std::cout<<m_buffer.retrieve_all_to_str()<<std::endl;
 
         if(m_is_async  && m_deque && !m_deque->full()){ // 异步写入，先保存到阻塞队列中。
             m_deque->push_back(m_buffer.retrieve_all_to_str());// 将这条信息添加到阻塞队列中

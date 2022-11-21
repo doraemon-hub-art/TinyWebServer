@@ -125,24 +125,10 @@ CMakeFiles/TinyWebServer.dir/server/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyWebServer.dir/server/server.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.OnfxKmkgDM/server/server.cpp -o CMakeFiles/TinyWebServer.dir/server/server.cpp.s
 
-CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o: CMakeFiles/TinyWebServer.dir/flags.make
-CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o: ../lock/locker.cpp
-CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o: CMakeFiles/TinyWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.OnfxKmkgDM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o -MF CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o.d -o CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o -c /tmp/tmp.OnfxKmkgDM/lock/locker.cpp
-
-CMakeFiles/TinyWebServer.dir/lock/locker.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TinyWebServer.dir/lock/locker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.OnfxKmkgDM/lock/locker.cpp > CMakeFiles/TinyWebServer.dir/lock/locker.cpp.i
-
-CMakeFiles/TinyWebServer.dir/lock/locker.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyWebServer.dir/lock/locker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.OnfxKmkgDM/lock/locker.cpp -o CMakeFiles/TinyWebServer.dir/lock/locker.cpp.s
-
 CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o: CMakeFiles/TinyWebServer.dir/flags.make
 CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o: ../http/http_conn.cpp
 CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o: CMakeFiles/TinyWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.OnfxKmkgDM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.OnfxKmkgDM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o -MF CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o.d -o CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o -c /tmp/tmp.OnfxKmkgDM/http/http_conn.cpp
 
 CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.i: cmake_force
@@ -156,7 +142,7 @@ CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.s: cmake_force
 CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o: CMakeFiles/TinyWebServer.dir/flags.make
 CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o: ../buffer/buffer.cpp
 CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o: CMakeFiles/TinyWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.OnfxKmkgDM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.OnfxKmkgDM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o -MF CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o.d -o CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o -c /tmp/tmp.OnfxKmkgDM/buffer/buffer.cpp
 
 CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.i: cmake_force
@@ -167,15 +153,29 @@ CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.OnfxKmkgDM/buffer/buffer.cpp -o CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.s
 
+CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o: CMakeFiles/TinyWebServer.dir/flags.make
+CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o: ../heap_timer/heap_timer.cpp
+CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o: CMakeFiles/TinyWebServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.OnfxKmkgDM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o -MF CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o.d -o CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o -c /tmp/tmp.OnfxKmkgDM/heap_timer/heap_timer.cpp
+
+CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.OnfxKmkgDM/heap_timer/heap_timer.cpp > CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.i
+
+CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.OnfxKmkgDM/heap_timer/heap_timer.cpp -o CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.s
+
 # Object files for target TinyWebServer
 TinyWebServer_OBJECTS = \
 "CMakeFiles/TinyWebServer.dir/main.cpp.o" \
 "CMakeFiles/TinyWebServer.dir/log/log.cpp.o" \
 "CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.o" \
 "CMakeFiles/TinyWebServer.dir/server/server.cpp.o" \
-"CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o" \
 "CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o" \
-"CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o"
+"CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o" \
+"CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o"
 
 # External object files for target TinyWebServer
 TinyWebServer_EXTERNAL_OBJECTS =
@@ -184,9 +184,9 @@ TinyWebServer: CMakeFiles/TinyWebServer.dir/main.cpp.o
 TinyWebServer: CMakeFiles/TinyWebServer.dir/log/log.cpp.o
 TinyWebServer: CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.o
 TinyWebServer: CMakeFiles/TinyWebServer.dir/server/server.cpp.o
-TinyWebServer: CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o
 TinyWebServer: CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o
 TinyWebServer: CMakeFiles/TinyWebServer.dir/buffer/buffer.cpp.o
+TinyWebServer: CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o
 TinyWebServer: CMakeFiles/TinyWebServer.dir/build.make
 TinyWebServer: CMakeFiles/TinyWebServer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.OnfxKmkgDM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable TinyWebServer"

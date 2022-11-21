@@ -177,6 +177,30 @@ epoller/epoller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/epoller/epoller.cpp.s
 .PHONY : epoller/epoller.cpp.s
 
+heap_timer/heap_timer.o: heap_timer/heap_timer.cpp.o
+.PHONY : heap_timer/heap_timer.o
+
+# target to build an object file
+heap_timer/heap_timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.o
+.PHONY : heap_timer/heap_timer.cpp.o
+
+heap_timer/heap_timer.i: heap_timer/heap_timer.cpp.i
+.PHONY : heap_timer/heap_timer.i
+
+# target to preprocess a source file
+heap_timer/heap_timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.i
+.PHONY : heap_timer/heap_timer.cpp.i
+
+heap_timer/heap_timer.s: heap_timer/heap_timer.cpp.s
+.PHONY : heap_timer/heap_timer.s
+
+# target to generate assembly for a file
+heap_timer/heap_timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.s
+.PHONY : heap_timer/heap_timer.cpp.s
+
 http/http_conn.o: http/http_conn.cpp.o
 .PHONY : http/http_conn.o
 
@@ -200,30 +224,6 @@ http/http_conn.s: http/http_conn.cpp.s
 http/http_conn.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.s
 .PHONY : http/http_conn.cpp.s
-
-lock/locker.o: lock/locker.cpp.o
-.PHONY : lock/locker.o
-
-# target to build an object file
-lock/locker.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/lock/locker.cpp.o
-.PHONY : lock/locker.cpp.o
-
-lock/locker.i: lock/locker.cpp.i
-.PHONY : lock/locker.i
-
-# target to preprocess a source file
-lock/locker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/lock/locker.cpp.i
-.PHONY : lock/locker.cpp.i
-
-lock/locker.s: lock/locker.cpp.s
-.PHONY : lock/locker.s
-
-# target to generate assembly for a file
-lock/locker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/lock/locker.cpp.s
-.PHONY : lock/locker.cpp.s
 
 log/log.o: log/log.cpp.o
 .PHONY : log/log.o
@@ -312,12 +312,12 @@ help:
 	@echo "... epoller/epoller.o"
 	@echo "... epoller/epoller.i"
 	@echo "... epoller/epoller.s"
+	@echo "... heap_timer/heap_timer.o"
+	@echo "... heap_timer/heap_timer.i"
+	@echo "... heap_timer/heap_timer.s"
 	@echo "... http/http_conn.o"
 	@echo "... http/http_conn.i"
 	@echo "... http/http_conn.s"
-	@echo "... lock/locker.o"
-	@echo "... lock/locker.i"
-	@echo "... lock/locker.s"
 	@echo "... log/log.o"
 	@echo "... log/log.i"
 	@echo "... log/log.s"

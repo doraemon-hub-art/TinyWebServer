@@ -23,7 +23,7 @@ public:
               const char* suffix = ".log",
               int max_queue_capacity = 1024);
 
-    // 单例模式，获取唯一实例
+    // 单例模式，获取唯一实例，懒汉模式创建时构造。
     static log* instance();
 
     // 调用异步写入
