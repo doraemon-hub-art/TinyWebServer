@@ -124,6 +124,12 @@
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/server/server.h">
 			<Option target="TinyWebServer"/>
 		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/sql_conn_pool/sql_conn_pool.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/sql_conn_pool/sql_conn_pool.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

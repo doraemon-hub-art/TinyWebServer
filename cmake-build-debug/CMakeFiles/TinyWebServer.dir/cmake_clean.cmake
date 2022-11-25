@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/TinyWebServer.dir/main.cpp.o.d"
   "CMakeFiles/TinyWebServer.dir/server/server.cpp.o"
   "CMakeFiles/TinyWebServer.dir/server/server.cpp.o.d"
+  "CMakeFiles/TinyWebServer.dir/sql_conn_pool/sql_conn_pool.cpp.o"
+  "CMakeFiles/TinyWebServer.dir/sql_conn_pool/sql_conn_pool.cpp.o.d"
   "TinyWebServer"
   "TinyWebServer.pdb"
 )

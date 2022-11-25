@@ -297,6 +297,30 @@ server/server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/server/server.cpp.s
 .PHONY : server/server.cpp.s
 
+sql_conn_pool/sql_conn_pool.o: sql_conn_pool/sql_conn_pool.cpp.o
+.PHONY : sql_conn_pool/sql_conn_pool.o
+
+# target to build an object file
+sql_conn_pool/sql_conn_pool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/sql_conn_pool/sql_conn_pool.cpp.o
+.PHONY : sql_conn_pool/sql_conn_pool.cpp.o
+
+sql_conn_pool/sql_conn_pool.i: sql_conn_pool/sql_conn_pool.cpp.i
+.PHONY : sql_conn_pool/sql_conn_pool.i
+
+# target to preprocess a source file
+sql_conn_pool/sql_conn_pool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/sql_conn_pool/sql_conn_pool.cpp.i
+.PHONY : sql_conn_pool/sql_conn_pool.cpp.i
+
+sql_conn_pool/sql_conn_pool.s: sql_conn_pool/sql_conn_pool.cpp.s
+.PHONY : sql_conn_pool/sql_conn_pool.s
+
+# target to generate assembly for a file
+sql_conn_pool/sql_conn_pool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/sql_conn_pool/sql_conn_pool.cpp.s
+.PHONY : sql_conn_pool/sql_conn_pool.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -327,6 +351,9 @@ help:
 	@echo "... server/server.o"
 	@echo "... server/server.i"
 	@echo "... server/server.s"
+	@echo "... sql_conn_pool/sql_conn_pool.o"
+	@echo "... sql_conn_pool/sql_conn_pool.i"
+	@echo "... sql_conn_pool/sql_conn_pool.s"
 .PHONY : help
 
 
