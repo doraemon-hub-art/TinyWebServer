@@ -18,6 +18,8 @@
 
 class log {
 public:
+
+    // 初始化
     void init(int level,
               const char* path = "./log",
               const char* suffix = ".log",
@@ -29,7 +31,7 @@ public:
     // 调用异步写入
     static void flush_log_thread();
 
-    // 写入 内部区分-异步/同步，异步写入阻塞队列，同步直接写入文件
+    // 写入文件——内部区分-异步/同步，异步写入阻塞队列，同步直接写入文件
     void write(int level,const char* format,...);
 
     // 将缓冲区内容写入文件
@@ -66,7 +68,7 @@ private:
     // 日志文件名字长度
     static const int LOG_NAME_LEN = 256;
 
-    //
+    // 最大行数
     static const int MAX_LINES =  50000;
 
     // 路径
@@ -118,6 +120,7 @@ private:
           log->flush();                             \
        }\
     }while(0);
+
 
 #define LOG_DEBUG(format,...)do{LOG_BASE(0,format,##__VA_ARGS__)}while(0);
 #define LOG_INFO(format,...)do{LOG_BASE(1,format,##__VA_ARGS__)}while(0);

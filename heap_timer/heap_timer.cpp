@@ -135,6 +135,7 @@ void heap_timer::tick() {
     while(!m_heap.empty()){
         timer_node node = m_heap.front();// 取到堆顶元素
         // 小顶堆，堆顶不超时的，就直接break，无需再验证后面的了。
+        // 判断毫秒差
         if(std::chrono::duration_cast<MS>(node.expires - CLOCK::now()).count() > 0){
             break;
         }
@@ -150,9 +151,10 @@ void heap_timer::clear() {
 }
 
 int heap_timer::get_next_tick() {
-    tick();// 检查超时的
+    tick();// 检查超时的定时器
     size_t res = -1;
-    if(!m_heap.empty()){
+    if(!m_heap.empty()){// 堆数组非空
+        // 毫秒差
         res = std::chrono::duration_cast<MS>(m_heap.front().expires - CLOCK::now()).count();
         if(res < 0){
             res = 0;

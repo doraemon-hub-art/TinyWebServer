@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 #include "epoller/epoller.h"
 #include "log/log.h"
 
@@ -36,8 +37,10 @@ int main() {
     // 开始代码报了个错，检查了已经歇写了的几个类。
     //log* log_test = log::instance();
     //log_test->init(1);
-    log::instance()->init(1, "./log_file", ".log", 1024);
-    LOG_INFO("========== Server init ==========");
-    LOG_INFO("========== Server end ==========");
+    //log::instance()->init(1, "./log_file", ".log", 1024);
+    //LOG_INFO("========== Server init ==========");
+    //LOG_INFO("========== Server end ==========");
+   // std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now()).count();
+
     return 0;
 }

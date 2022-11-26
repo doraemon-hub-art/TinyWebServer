@@ -52,13 +52,13 @@ public:
 
     ~heap_timer();
 
-    //  调整指定
+    //  调整指定定时器超时时间
     void adjust(int fd,int new_expires);
 
     // 添加结点-client socket fd-超时时间-回调函数
     void add(int fd,int timeout,const TIME_OUT_CALl_BACK & cb);
 
-    // 执行对应的回调函数——执行任务-超时了调用。
+    // 执行定时器对应的回调函数——执行任务-超时了调用。
     void do_work(int fd);
 
     // 清空时间堆
@@ -67,10 +67,10 @@ public:
     // 检查堆中是否有超时的定时器
     void tick();
 
-    //  删除堆顶元素
+    //  删除堆顶定时器
     void pop();
 
-
+    // 下一个要超时的定时器还有多少毫秒
     int get_next_tick();
 
 private:
