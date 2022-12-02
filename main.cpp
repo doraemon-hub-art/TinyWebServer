@@ -1,46 +1,20 @@
-#include <iostream>
-#include <chrono>
-#include "epoller/epoller.h"
-#include "log/log.h"
-
-// test头文件
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <string.h>
-//#include <errno.h>
-//#include <sys/types.h>
-//#include <sys/socket.h>
-//#include <arpa/inet.h>
-//#include <netinet/in.h>
-//#include <assert.h>
-//#include <fcntl.h>
-//#include <unistd.h>
-
+#include <unistd.h>
+#include "server/server.h"
 
 int main() {
 
-    int port = 8080;    // 端口
-    int trig_mode = 0;  // 触发模式
-    int timeout = 6000; // 超时时间
-    bool youya = false; // 优雅退出
-    int sql_port = 3306; // 数据库端口
-    std::string sql_name = "root";
-    std::string sql_passwd  = "123";
-    std::string data_bases = "WebServer";
-    int sql_conn_nums = 8; // 数据库连接池数量
-    int thread_nums = 8; // 线程池线程数量
-    bool log_switch = true; // 日志开关
-    int log_block_queue = 1024; // 日志阻塞队列容量
+    // 数据库名称webserver
+    // 表明user
+    // 测试账号username : test password: 123
+    // 数据库用户名: root
+    // 数据库密码: 123
 
-    // 吃完饭洗完衣服回来测试
-    // 开始测试
-    // 开始代码报了个错，检查了已经歇写了的几个类。
-    //log* log_test = log::instance();
-    //log_test->init(1);
-    //log::instance()->init(1, "./log_file", ".log", 1024);
-    //LOG_INFO("========== Server init ==========");
-    //LOG_INFO("========== Server end ==========");
-   // std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now()).count();
+    // 数据库端口3306
+    // WebServer服务器开放端口9006
+    server webserver(
+            9006,3,60000, false,// 端口，fd模式，超时时间，优雅退出
+            3306,"roor","123","webserver",// mysql配置
+            12,6,true,1,1024);// 连接池数量，线程池数量，日志开关，日志等级，日志异步队列容量
 
     return 0;
 }

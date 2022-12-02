@@ -201,29 +201,77 @@ heap_timer/heap_timer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/heap_timer/heap_timer.cpp.s
 .PHONY : heap_timer/heap_timer.cpp.s
 
-http/http_conn.o: http/http_conn.cpp.o
-.PHONY : http/http_conn.o
+http/http_conn/http_conn.o: http/http_conn/http_conn.cpp.o
+.PHONY : http/http_conn/http_conn.o
 
 # target to build an object file
-http/http_conn.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.o
-.PHONY : http/http_conn.cpp.o
+http/http_conn/http_conn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn/http_conn.cpp.o
+.PHONY : http/http_conn/http_conn.cpp.o
 
-http/http_conn.i: http/http_conn.cpp.i
-.PHONY : http/http_conn.i
+http/http_conn/http_conn.i: http/http_conn/http_conn.cpp.i
+.PHONY : http/http_conn/http_conn.i
 
 # target to preprocess a source file
-http/http_conn.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.i
-.PHONY : http/http_conn.cpp.i
+http/http_conn/http_conn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn/http_conn.cpp.i
+.PHONY : http/http_conn/http_conn.cpp.i
 
-http/http_conn.s: http/http_conn.cpp.s
-.PHONY : http/http_conn.s
+http/http_conn/http_conn.s: http/http_conn/http_conn.cpp.s
+.PHONY : http/http_conn/http_conn.s
 
 # target to generate assembly for a file
-http/http_conn.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn.cpp.s
-.PHONY : http/http_conn.cpp.s
+http/http_conn/http_conn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_conn/http_conn.cpp.s
+.PHONY : http/http_conn/http_conn.cpp.s
+
+http/http_request/http_request.o: http/http_request/http_request.cpp.o
+.PHONY : http/http_request/http_request.o
+
+# target to build an object file
+http/http_request/http_request.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_request/http_request.cpp.o
+.PHONY : http/http_request/http_request.cpp.o
+
+http/http_request/http_request.i: http/http_request/http_request.cpp.i
+.PHONY : http/http_request/http_request.i
+
+# target to preprocess a source file
+http/http_request/http_request.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_request/http_request.cpp.i
+.PHONY : http/http_request/http_request.cpp.i
+
+http/http_request/http_request.s: http/http_request/http_request.cpp.s
+.PHONY : http/http_request/http_request.s
+
+# target to generate assembly for a file
+http/http_request/http_request.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_request/http_request.cpp.s
+.PHONY : http/http_request/http_request.cpp.s
+
+http/http_response/http_response.o: http/http_response/http_response.cpp.o
+.PHONY : http/http_response/http_response.o
+
+# target to build an object file
+http/http_response/http_response.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_response/http_response.cpp.o
+.PHONY : http/http_response/http_response.cpp.o
+
+http/http_response/http_response.i: http/http_response/http_response.cpp.i
+.PHONY : http/http_response/http_response.i
+
+# target to preprocess a source file
+http/http_response/http_response.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_response/http_response.cpp.i
+.PHONY : http/http_response/http_response.cpp.i
+
+http/http_response/http_response.s: http/http_response/http_response.cpp.s
+.PHONY : http/http_response/http_response.s
+
+# target to generate assembly for a file
+http/http_response/http_response.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TinyWebServer.dir/build.make CMakeFiles/TinyWebServer.dir/http/http_response/http_response.cpp.s
+.PHONY : http/http_response/http_response.cpp.s
 
 log/log.o: log/log.cpp.o
 .PHONY : log/log.o
@@ -339,9 +387,15 @@ help:
 	@echo "... heap_timer/heap_timer.o"
 	@echo "... heap_timer/heap_timer.i"
 	@echo "... heap_timer/heap_timer.s"
-	@echo "... http/http_conn.o"
-	@echo "... http/http_conn.i"
-	@echo "... http/http_conn.s"
+	@echo "... http/http_conn/http_conn.o"
+	@echo "... http/http_conn/http_conn.i"
+	@echo "... http/http_conn/http_conn.s"
+	@echo "... http/http_request/http_request.o"
+	@echo "... http/http_request/http_request.i"
+	@echo "... http/http_request/http_request.s"
+	@echo "... http/http_response/http_response.o"
+	@echo "... http/http_response/http_response.i"
+	@echo "... http/http_response/http_response.s"
 	@echo "... log/log.o"
 	@echo "... log/log.i"
 	@echo "... log/log.s"

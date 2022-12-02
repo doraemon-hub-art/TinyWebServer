@@ -103,10 +103,22 @@
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/heap_timer/heap_timer.h">
 			<Option target="TinyWebServer"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_conn.cpp">
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_conn/http_conn.cpp">
 			<Option target="TinyWebServer"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_conn.h">
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_conn/http_conn.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_request/http_request.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_request/http_request.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_response/http_response.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.OnfxKmkgDM/http/http_response/http_response.h">
 			<Option target="TinyWebServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.OnfxKmkgDM/log/log.cpp">
