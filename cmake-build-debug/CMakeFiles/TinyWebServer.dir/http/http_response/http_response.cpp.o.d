@@ -1,7 +1,8 @@
-CMakeFiles/TinyWebServer.dir/server/server.cpp.o: \
- /tmp/tmp.OnfxKmkgDM/server/server.cpp /usr/include/stdc-predef.h \
- /tmp/tmp.OnfxKmkgDM/server/server.h /usr/include/c++/9/unordered_map \
- /usr/include/c++/9/type_traits \
+CMakeFiles/TinyWebServer.dir/http/http_response/http_response.cpp.o: \
+ /tmp/tmp.OnfxKmkgDM/http/http_response/http_response.cpp \
+ /usr/include/stdc-predef.h \
+ /tmp/tmp.OnfxKmkgDM/http/http_response/http_response.h \
+ /usr/include/c++/9/unordered_map /usr/include/c++/9/type_traits \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -140,76 +141,39 @@ CMakeFiles/TinyWebServer.dir/server/server.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/c++/9/cassert /usr/include/assert.h /usr/include/error.h \
- /usr/include/x86_64-linux-gnu/bits/error.h \
- /usr/include/x86_64-linux-gnu/sys/socket.h \
- /usr/include/x86_64-linux-gnu/bits/socket.h \
- /usr/include/x86_64-linux-gnu/bits/socket_type.h \
- /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
- /usr/include/x86_64-linux-gnu/asm/socket.h \
- /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
- /usr/include/asm-generic/posix_types.h \
- /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
- /usr/include/asm-generic/bitsperlong.h \
- /usr/include/x86_64-linux-gnu/asm/sockios.h \
- /usr/include/asm-generic/sockios.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/bits/in.h \
- /usr/include/arpa/inet.h /tmp/tmp.OnfxKmkgDM/server/../epoller/epoller.h \
- /usr/include/x86_64-linux-gnu/sys/epoll.h \
- /usr/include/x86_64-linux-gnu/bits/epoll.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_construct.h \
- /usr/include/c++/9/bits/stl_uninitialized.h \
- /usr/include/c++/9/bits/stl_vector.h \
- /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /tmp/tmp.OnfxKmkgDM/server/../log/log.h /usr/include/c++/9/mutex \
- /usr/include/c++/9/chrono /usr/include/c++/9/ratio \
- /usr/include/c++/9/ctime /usr/include/c++/9/bits/parse_numbers.h \
- /usr/include/c++/9/system_error \
- /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
- /usr/include/c++/9/bits/std_mutex.h \
- /usr/include/c++/9/bits/unique_lock.h /usr/include/c++/9/thread \
- /usr/include/c++/9/memory /usr/include/c++/9/bits/stl_tempbuf.h \
- /usr/include/c++/9/bits/stl_raw_storage_iter.h \
- /usr/include/c++/9/ext/concurrence.h \
- /usr/include/c++/9/bits/unique_ptr.h \
- /usr/include/c++/9/bits/shared_ptr.h \
- /usr/include/c++/9/bits/shared_ptr_base.h \
- /usr/include/c++/9/bits/allocated_ptr.h \
- /usr/include/c++/9/bits/refwrap.h \
- /usr/include/c++/9/bits/shared_ptr_atomic.h \
- /usr/include/c++/9/bits/atomic_base.h \
- /usr/include/c++/9/bits/atomic_lockfree_defines.h \
- /usr/include/c++/9/backward/auto_ptr.h \
- /usr/include/c++/9/pstl/glue_memory_defs.h \
- /usr/include/c++/9/pstl/execution_defs.h \
- /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/string.h \
- /usr/include/strings.h /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
  /usr/include/linux/types.h /usr/include/x86_64-linux-gnu/asm/types.h \
  /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h \
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
- /tmp/tmp.OnfxKmkgDM/server/../log/../block_queue/block_queue.h \
- /usr/include/c++/9/deque /usr/include/c++/9/bits/stl_deque.h \
- /usr/include/c++/9/bits/deque.tcc /usr/include/c++/9/condition_variable \
- /tmp/tmp.OnfxKmkgDM/server/../log/../buffer/buffer.h \
- /usr/include/c++/9/cstring /usr/include/c++/9/iostream \
- /usr/include/c++/9/ostream /usr/include/c++/9/ios \
- /usr/include/c++/9/bits/ios_base.h \
+ /usr/include/x86_64-linux-gnu/sys/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
+ /tmp/tmp.OnfxKmkgDM/http/http_response/../../buffer/buffer.h \
+ /usr/include/c++/9/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/9/iostream /usr/include/c++/9/ostream \
+ /usr/include/c++/9/ios /usr/include/c++/9/bits/ios_base.h \
  /usr/include/c++/9/bits/locale_classes.h \
- /usr/include/c++/9/bits/locale_classes.tcc /usr/include/c++/9/streambuf \
- /usr/include/c++/9/bits/streambuf.tcc \
+ /usr/include/c++/9/bits/locale_classes.tcc \
+ /usr/include/c++/9/system_error \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
+ /usr/include/c++/9/streambuf /usr/include/c++/9/bits/streambuf.tcc \
  /usr/include/c++/9/bits/basic_ios.h \
  /usr/include/c++/9/bits/locale_facets.h /usr/include/c++/9/cwctype \
  /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
@@ -222,71 +186,33 @@ CMakeFiles/TinyWebServer.dir/server/server.cpp.o: \
  /usr/include/c++/9/bits/istream.tcc \
  /usr/include/x86_64-linux-gnu/sys/uio.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio-ext.h /usr/include/c++/9/atomic \
- /tmp/tmp.OnfxKmkgDM/server/../heap_timer/heap_timer.h \
- /usr/include/c++/9/queue /usr/include/c++/9/bits/stl_heap.h \
- /usr/include/c++/9/bits/stl_queue.h /usr/include/c++/9/algorithm \
- /usr/include/c++/9/bits/stl_algo.h \
- /usr/include/c++/9/bits/algorithmfwd.h \
- /usr/include/c++/9/bits/uniform_int_dist.h \
- /usr/include/c++/9/pstl/glue_algorithm_defs.h \
- /usr/include/c++/9/functional /usr/include/c++/9/bits/std_function.h \
- /tmp/tmp.OnfxKmkgDM/server/../heap_timer/../log/log.h \
- /tmp/tmp.OnfxKmkgDM/server/../thread_pool/thread_pool.h \
- /tmp/tmp.OnfxKmkgDM/server/../sql_conn_pool/sql_conn_raii.h \
- /tmp/tmp.OnfxKmkgDM/server/../sql_conn_pool/sql_conn_pool.h \
- /usr/include/mysql/mysql.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
- /usr/include/mysql/field_types.h /usr/include/mysql/my_list.h \
- /usr/include/mysql/mysql_com.h /usr/include/mysql/my_command.h \
- /usr/include/mysql/my_compress.h \
- /usr/include/mysql/udf_registration_types.h \
- /usr/include/mysql/client_plugin.h /usr/include/c++/9/stdlib.h \
- /usr/include/mysql/plugin_auth_common.h \
- /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
- /usr/include/mysql/errmsg.h /usr/include/semaphore.h \
- /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /tmp/tmp.OnfxKmkgDM/server/../sql_conn_pool/../log/log.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/http_conn.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../../log/log.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../../sql_conn_pool/sql_conn_raii.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../../buffer/buffer.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../http_request/http_request.h \
- /usr/include/c++/9/unordered_set /usr/include/c++/9/bits/unordered_set.h \
- /usr/include/c++/9/regex /usr/include/c++/9/bitset \
- /usr/include/c++/9/iterator /usr/include/c++/9/bits/stream_iterator.h \
- /usr/include/c++/9/locale /usr/include/c++/9/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/9/bits/codecvt.h \
- /usr/include/c++/9/bits/locale_facets_nonio.tcc \
- /usr/include/c++/9/bits/locale_conv.h /usr/include/c++/9/sstream \
- /usr/include/c++/9/bits/sstream.tcc /usr/include/c++/9/stack \
- /usr/include/c++/9/bits/stl_stack.h /usr/include/c++/9/map \
- /usr/include/c++/9/bits/stl_tree.h /usr/include/c++/9/bits/stl_map.h \
- /usr/include/c++/9/bits/stl_multimap.h \
- /usr/include/c++/9/bits/regex_constants.h \
- /usr/include/c++/9/bits/regex_error.h \
- /usr/include/c++/9/bits/regex_automaton.h \
- /usr/include/c++/9/bits/regex_automaton.tcc \
- /usr/include/c++/9/bits/regex_scanner.h \
- /usr/include/c++/9/bits/regex_scanner.tcc \
- /usr/include/c++/9/bits/regex_compiler.h \
- /usr/include/c++/9/bits/regex_compiler.tcc \
- /usr/include/c++/9/bits/regex.h /usr/include/c++/9/bits/regex.tcc \
- /usr/include/c++/9/bits/regex_executor.h \
- /usr/include/c++/9/bits/regex_executor.tcc \
- /usr/include/c++/9/memory_resource /usr/include/c++/9/cstddef \
- /usr/include/c++/9/shared_mutex \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../http_request/../../buffer/buffer.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../http_request/../../log/log.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../http_request/../../sql_conn_pool/sql_conn_pool.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../http_request/../../sql_conn_pool/sql_conn_raii.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../http_response/http_response.h \
- /usr/include/x86_64-linux-gnu/sys/mman.h \
- /usr/include/x86_64-linux-gnu/bits/mman.h \
- /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
- /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
- /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../http_response/../../buffer/buffer.h \
- /tmp/tmp.OnfxKmkgDM/server/../http/http_conn/../http_response/../../log/log.h
+ /usr/include/x86_64-linux-gnu/bits/uio-ext.h /usr/include/c++/9/vector \
+ /usr/include/c++/9/bits/stl_construct.h \
+ /usr/include/c++/9/bits/stl_uninitialized.h \
+ /usr/include/c++/9/bits/stl_vector.h \
+ /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
+ /usr/include/c++/9/atomic /usr/include/c++/9/bits/atomic_base.h \
+ /usr/include/c++/9/bits/atomic_lockfree_defines.h /usr/include/assert.h \
+ /tmp/tmp.OnfxKmkgDM/http/http_response/../../log/log.h \
+ /usr/include/c++/9/mutex /usr/include/c++/9/chrono \
+ /usr/include/c++/9/ratio /usr/include/c++/9/ctime \
+ /usr/include/c++/9/bits/parse_numbers.h \
+ /usr/include/c++/9/bits/std_mutex.h \
+ /usr/include/c++/9/bits/unique_lock.h /usr/include/c++/9/thread \
+ /usr/include/c++/9/memory /usr/include/c++/9/bits/stl_tempbuf.h \
+ /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/9/ext/concurrence.h \
+ /usr/include/c++/9/bits/unique_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr_base.h \
+ /usr/include/c++/9/bits/allocated_ptr.h \
+ /usr/include/c++/9/bits/refwrap.h \
+ /usr/include/c++/9/bits/shared_ptr_atomic.h \
+ /usr/include/c++/9/backward/auto_ptr.h \
+ /usr/include/c++/9/pstl/glue_memory_defs.h \
+ /usr/include/c++/9/pstl/execution_defs.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
+ /tmp/tmp.OnfxKmkgDM/http/http_response/../../log/../block_queue/block_queue.h \
+ /usr/include/c++/9/deque /usr/include/c++/9/bits/stl_deque.h \
+ /usr/include/c++/9/bits/deque.tcc /usr/include/c++/9/condition_variable \
+ /tmp/tmp.OnfxKmkgDM/http/http_response/../../log/../buffer/buffer.h
