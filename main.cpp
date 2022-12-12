@@ -12,10 +12,23 @@ int main() {
     // 数据库端口3306
     // WebServer服务器开放端口9006
     // 调试8
-    server webserver(
-            9006,3,60000, false,// 端口，fd模式，超时时间，优雅退出
-            3306,"roor","123","webserver",// mysql配置
-            12,6,true,1,1024);// 连接池数量，线程池数量，日志开关，日志等级，日志异步队列容量
-    webserver.start();
+//    server webserver(
+//            9006,3,60000, false,// 端口，fd模式，超时时间，优雅退出
+//            3306,"roor","123","webserver",// mysql配置
+//            12,6,true,1,1024);// 连接池数量，线程池数量，日志开关，日志等级，日志异步队列容量
+//    webserver.start();
+
+    char c;
+    char d;
+    c = getchar();
+
+    fflush(stdin);
+
+    d = getchar();
+    //d = getchar();
+
+    printf("%c\n",c);
+    printf("%c\n",d);
+
     return 0;
 }
