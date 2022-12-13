@@ -16,7 +16,7 @@
 
 class sql_conn_pool {
 public:
-    // 单例模式-获取实例
+    // 单例模式- 获取实例
     static sql_conn_pool* instance();
 
     // 连接池中取到连接
