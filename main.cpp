@@ -17,18 +17,5 @@ int main() {
 //            3306,"roor","123","webserver",// mysql配置
 //            12,6,true,1,1024);// 连接池数量，线程池数量，日志开关，日志等级，日志异步队列容量
 //    webserver.start();
-
-    char c;
-    char d;
-    c = getchar();
-
-    fflush(stdin);
-
-    d = getchar();
-    //d = getchar();
-
-    printf("%c\n",c);
-    printf("%c\n",d);
-
     return 0;
 }
