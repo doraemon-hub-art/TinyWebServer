@@ -21,7 +21,7 @@ public:
 
     // 初始化
     void init(int level,
-              const char* path = "./log",
+              const char* path = "./log/logs",
               const char* suffix = ".log",
               int max_queue_capacity = 1024);
 

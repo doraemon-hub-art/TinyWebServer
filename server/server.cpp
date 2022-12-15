@@ -6,9 +6,11 @@
 
 server::server(int port, int trig_mode, int timeout_ms, bool opt_linger, int sql_port, const char *sql_user,
                const char *sql_pwd, const char *db_name, int conn_pool_num, int thread_num, bool open_log,
-               int log_level, int log_que_size) {
+               int log_level, int log_que_size):m_port(port),m_open_linger(opt_linger),m_timeout_ms(timeout_ms),m_is_close(
+        false),m_timer(new heap_timer()),m_thread_pool(new thread_pool(thread_num)),m_epoller(new epoller()){
 
     m_src_dir = getcwd(nullptr,256);// 获取当前程序的工作路径
+    std::cout<<m_src_dir<<std::endl;
     assert(m_src_dir);
     strncat(m_src_dir,"/resources/",16);// 追加/resources/
     http_conn::m_user_count = 0;// 当前用户初始化为0
@@ -21,7 +23,7 @@ server::server(int port, int trig_mode, int timeout_ms, bool opt_linger, int sql
     }
 
     if(open_log){// 打开日志
-        log::instance()->init(log_level,"./log",".log",log_que_size);
+        log::instance()->init(log_level,"./log/logs/",".log",log_que_size);
         if(m_is_close){
             LOG_ERROR("========== Server init error!==========");
         }else{

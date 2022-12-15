@@ -17,19 +17,19 @@ public:
     explicit thread_pool(size_t thread_count = 8):m_pool(std::make_shared<pool>()){
         assert(thread_count > 0);
         for(size_t i = 0; i < thread_count;i++){
-            std::thread([pool = m_pool]{
-                std::unique_lock<std::mutex>locker(pool->m_mutex);
-                while(1){
-                    if(!pool->m_tasks.empty()){// 有任务
-                        auto task = std::move(pool->m_tasks.front());
-                        pool->m_tasks.pop();
+            std::thread([Pool = m_pool]{// lambda,创建线程，线程任务
+                std::unique_lock<std::mutex>locker(Pool->m_mutex);
+                while(1){//尝试取任务
+                    if(!Pool->m_tasks.empty()){// 有任务
+                        auto task = std::move(Pool->m_tasks.front());
+                        Pool->m_tasks.pop();
                         locker.unlock();
                         task();// 执行
                         locker.lock();
-                    }else if(pool->m_is_closed){// 关闭了
+                    }else if(Pool->m_is_closed){// 关闭了
                         break;
-                    }else{
-                        pool->m_cond.wait(locker);// 使线程等待
+                    }else{// 没有任务啦
+                        Pool->m_cond.wait(locker);// 使线程等待
                     }
                 }
             }).detach();// 将子线程和从主线程中分离
@@ -46,7 +46,7 @@ public:
                 std::lock_guard<std::mutex>locker(m_pool->m_mutex);
                 m_pool->m_is_closed = true;// 关闭标识
             }
-            m_pool->m_cond.notify_all();
+            m_pool->m_cond.notify_all();// 唤醒所有等待线程
         }
     }
 
@@ -54,15 +54,16 @@ public:
     template<class T>
     void add_task(T&& task){
         {
-            std::lock_guard<std::mutex>locker(m_pool->m_mutex);
+            std::lock_guard<std::mutex>locker(m_pool->m_mutex);// 锁
 
             // forward完美转发，防止多余拷贝
             m_pool->m_tasks.emplace(std::forward<T>(task));// 放入任务队列
         }
+        m_pool->m_cond.notify_one();// 唤醒一个等待线程
     }
 
 private:
-    // 池子内容封装
+    // -一个池子
     struct pool{
         std::mutex m_mutex;
         std::condition_variable m_cond;

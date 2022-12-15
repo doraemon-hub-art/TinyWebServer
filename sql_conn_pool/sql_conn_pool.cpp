@@ -8,6 +8,11 @@ sql_conn_pool::~sql_conn_pool() {
     close_pool();// 关闭连接池
 }
 
+sql_conn_pool::sql_conn_pool() {
+    m_user_count = 0;
+    m_free_count = 0;
+}
+
 sql_conn_pool* sql_conn_pool::instance() {
     static sql_conn_pool conn_pool;
     return &conn_pool;
@@ -18,7 +23,7 @@ void sql_conn_pool::init(const char *host,
                          const char *user,
                          const char *pwd,
                          const char *db_name,
-                         int con_size) {
+                         int con_size = 10) {
     assert(con_size > 0);// 合法变量
     for(int i = 0; i < con_size;i++){//根据个数创建数据库连接
         MYSQL* sql = nullptr;
@@ -45,7 +50,7 @@ MYSQL* sql_conn_pool::get_conn() {
         LOG_WARN("MySQL connect pool busy!")
         return nullptr;
     }
-    sem_wait(&m_sem_id);// 尝试获取信号量
+    sem_wait(&m_sem_id);// 尝试获取信号量 & 信号量-1
     {// 临界区
         std::lock_guard<std::mutex>locker(m_mutex);// 上锁
         sql = m_conn_que.front();// 取出来最前面的

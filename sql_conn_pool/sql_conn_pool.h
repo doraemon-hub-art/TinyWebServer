@@ -42,13 +42,20 @@ public:
 private:
 
     // 私有化构造函数
-    sql_conn_pool()=default;
+    sql_conn_pool();
 
     // 析构
     ~sql_conn_pool();
 
+private:
     // 最大连接数量
     int m_max_conn;
+
+    // 当前连接数量-这两个变量多余
+    int m_user_count;
+
+    // 当前空闲连接数量
+    int m_free_count;
 
     // 连接池容器
     std::queue<MYSQL*> m_conn_que;

@@ -7,7 +7,7 @@
 
 #include "sql_conn_pool.h"
 
-// 资源构造即初始化，在对象析构时释放
+// RAII-资源构造即初始化，在对象析构时释放
 class sql_conn_raii{
 public:
     sql_conn_raii(MYSQL** sql,sql_conn_pool* conn_pool){
@@ -24,7 +24,10 @@ public:
     }
 
 private:
+    // 数据库链接
     MYSQL* m_sql;
+
+    // 数据库连接池
     sql_conn_pool* m_conn_pool;
 };
 
