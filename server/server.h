@@ -48,7 +48,7 @@ private:
     // 创建&初始化监听socket
     bool init_socket();
 
-    // 初始化监听模型-ET | LT
+    // 初始化监听模型- ET | LT
     void init_event_mode(int trig_mode);
 
     // 添加客户端连接
