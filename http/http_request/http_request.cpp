@@ -17,6 +17,7 @@ http_request::http_request() {
     init();
 }
 
+
 void http_request::init() {
     m_method = m_body = m_version = m_body = "";
     m_state = CHECK_STATE_REQUEST_LINE;// 初始化为解析请求行
@@ -41,7 +42,8 @@ bool http_request::parse(buffer &buffer) {
     // 请求行还没读完并且状态未到检查完的状态
     while(buffer.read_able_bytes() && m_state != CHECK_STATE_FINISH){
         // 定位到指定字符，返回其指针
-        const char* line_end = std::search(buffer.peek(),buffer.begin_write_const(),CRLF,CRLF+2);
+        const char* line_end = std::search(buffer.peek(),buffer.begin_write_const(),
+                                           CRLF,CRLF+2);
         std::string line(buffer.peek(),line_end);// 截取到\r\n之前的字符
         switch (m_state) {// 有限状态机
             case CHECK_STATE_REQUEST_LINE:{
@@ -115,7 +117,7 @@ void http_request::parse_body(const std::string &line) {
     m_body = line;
     parse_post();
     m_state = CHECK_STATE_FINISH;
-    LOG_DEBUG("Body:%s,len:%d",line.c_str(),line.size());
+    LOG_DEBUG("Body:%s, len:%d",line.c_str(),line.size());
 }
 
 int http_request::conver_hex(char ch) {
@@ -146,6 +148,10 @@ void http_request::parse_from_urlen_coded() {
     if(m_body.size() == 0){
         return;
     }
+
+    /**/
+    std::cout<<m_body<<std::endl;
+    /**/
 
     std::string key;
     std::string value;
@@ -207,7 +213,9 @@ bool http_request::user_verify(const std::string &name, const std::string &pwd, 
     }
 
     // 查询用户及密码
-    snprintf(order,256,"SELECT username, password FROM user WHERE username='%s' LIMIT 1",name.c_str());
+    snprintf(order,256,
+             "SELECT username, password FROM user WHERE username='%s' LIMIT 1",
+             name.c_str());
     LOG_DEBUG("%s",order);
 
     if(mysql_query(sql,order)){// 查询失败
@@ -217,7 +225,7 @@ bool http_request::user_verify(const std::string &name, const std::string &pwd, 
 
     res = mysql_store_result(sql);
     j = mysql_num_fields(res);// 结果集列数
-    fields = mysql_fetch_field(res);// 取得列的信息
+    fields = mysql_fetch_fields(res);// 取得列的信息
 
     while(MYSQL_ROW row = mysql_fetch_row(res)){// 获取结果集每一行数据
         LOG_DEBUG("MYSQL ROW: %s %s",row[0],row[1]);
@@ -241,7 +249,8 @@ bool http_request::user_verify(const std::string &name, const std::string &pwd, 
     if(!is_login && flag == true){
         LOG_DEBUG("register!");
         bzero(order,256);
-        snprintf(order,256,"INSERT INTO user(username, password) VALUES('%s','%s')",name.c_str(),pwd.c_str());
+        snprintf(order,256,"INSERT INTO user(username, password) VALUES('%s','%s')",
+                 name.c_str(),pwd.c_str());
         LOG_DEBUG("%s",order);
         if(mysql_query(sql,order)){// 注册失败
             LOG_DEBUG("insert error!");

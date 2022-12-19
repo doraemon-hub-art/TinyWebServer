@@ -115,7 +115,7 @@ private:
     // http版本-1.1
     std::string m_version;
 
-    //
+    // 请求体
     std::string m_body;
 
     // 保存当前连接的请求头

@@ -37,8 +37,9 @@ void log::set_level(int level) {
     std::lock_guard<std::mutex>locker(m_mutex);
     m_level = level;
 }
+
 bool log::is_open() {
-    std::lock_guard<std::mutex>locker(m_mutex);
+    //std::lock_guard<std::mutex>locker(m_mutex);
     return  m_is_open;
 }
 
@@ -123,7 +124,8 @@ void log::write(int level, const char *format, ...) {
             m_to_day = t.tm_mday;
             m_line_count = 0;
         }else{
-            snprintf(new_file,LOG_NAME_LEN - 72,"%s/%s-%d%s",m_path,tail,(m_line_count / MAX_LINES),m_suffix);
+            snprintf(new_file,LOG_NAME_LEN - 72,"%s/%s-%d%s",m_path,tail,
+                     (m_line_count / MAX_LINES),m_suffix);
         }
 
         locker.lock();// 锁上
@@ -136,7 +138,8 @@ void log::write(int level, const char *format, ...) {
     {
         std::unique_lock<std::mutex>locker(m_mutex);
         m_line_count++;
-        int n = snprintf(m_buffer.begin_write(),128,"%d-%02d-%02d %02d:%02d:%02d.%06ld ",
+        int n = snprintf(m_buffer.begin_write(),128,
+                         "%d-%02d-%02d %02d:%02d:%02d.%06ld ",
                          t.tm_year + 1900,
                          t.tm_mon + 1,
                          t.tm_mday,
@@ -149,13 +152,17 @@ void log::write(int level, const char *format, ...) {
         append_log_level_title(level);// 添加前缀
 
         va_start(vaList,format);
-        int m = vsnprintf(m_buffer.begin_write(),m_buffer.write_able_bytes(),format,vaList);
+        int m = vsnprintf(m_buffer.begin_write(),m_buffer.write_able_bytes(),
+                          format,vaList);
+
         va_end(vaList);
 
         m_buffer.has_written(m);
         m_buffer.append("\n\0",2);
 
-        //std::cout<<m_buffer.retrieve_all_to_str()<<std::endl;
+        /*********************/
+        std::cout<<m_buffer.retrieve_all_to_str()<<std::endl;
+        /*********************/
 
         if(m_is_async  && m_deque && !m_deque->full()){ // 异步写入，先保存到阻塞队列中。
             m_deque->push_back(m_buffer.retrieve_all_to_str());// 将这条信息添加到阻塞队列中
@@ -167,22 +174,22 @@ void log::write(int level, const char *format, ...) {
 }
 
 void log::append_log_level_title(int level) {
-    switch (level) {
-    case 0:
-        m_buffer.append("[debug]:",9);
-        break;
-    case 1:
-        m_buffer.append("[info]:",9);
-        break;
-    case 2:
-        m_buffer.append("[warn]:",9);
-        break;
-    case 3:
-        m_buffer.append("[error]:",9);
-        break;
-    default:
-        m_buffer.append("[info]: ",9);
-        break;
+    switch(level) {
+        case 0:
+            m_buffer.append("[debug]: ", 9);
+            break;
+        case 1:
+            m_buffer.append("[info] : ", 9);
+            break;
+        case 2:
+            m_buffer.append("[warn] : ", 9);
+            break;
+        case 3:
+            m_buffer.append("[error]: ", 9);
+            break;
+        default:
+            m_buffer.append("[info] : ", 9);
+            break;
     }
 }
 
