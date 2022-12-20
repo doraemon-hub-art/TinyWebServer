@@ -116,7 +116,7 @@ void http_response::add_header(buffer &buff) {
     }else{
         buff.append("close\r\n");
     }
-    buff.append("Content-type: " + get_file_type() + "/r/n");
+    buff.append("Content-type: " + get_file_type() + "\r\n");
 }
 
 void http_response::add_content(buffer &buff) {

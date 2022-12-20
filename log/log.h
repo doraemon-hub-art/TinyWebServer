@@ -113,14 +113,13 @@ private:
 };
 
 #define  LOG_BASE(level,format,...) \
-    do{                             \
-       log *log = log::instance();  \
-       if(log->is_open() && log->get_level() <= level){ \
-          log->write(level,format,##__VA_ARGS__);          \
-          log->flush();                             \
+    do{\
+       log *Log = log::instance();\
+       if(Log->is_open() && Log->get_level() <= level){ \
+          Log->write(level,format,##__VA_ARGS__);\
+          Log->flush();\
        }\
     }while(0);
-
 
 #define LOG_DEBUG(format,...)do{LOG_BASE(0,format,##__VA_ARGS__)}while(0);
 #define LOG_INFO(format,...)do{LOG_BASE(1,format,##__VA_ARGS__)}while(0);

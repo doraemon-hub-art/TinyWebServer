@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="TinyWebServer" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+  <component name="PublishConfigData" serverName="ubuntu 20.04.1" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
-      <paths name="HuaWeiCloud-Ubuntu (0cbe6ec6-9768-41e7-b833-6518c7011fed)">
+      <paths name="ubuntu 20.04.1">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/tmp.OnfxKmkgDM" local="$PROJECT_DIR$" />
-          </mappings>
-          <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
-          </excludedPaths>
-        </serverdata>
-      </paths>
-      <paths name="TinyWebServer">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/TinyWebServer" local="$PROJECT_DIR$" web="/home/xuanxuan/coding" />
-            <mapping local="" />
+            <mapping deploy="/my_files/TinyWebServer" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Web_Server">
+      <paths name="ubuntu server 20.04.1 (ee6408ad-f43f-4aef-9a84-efd74cc34a42)">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/tmp/tmp.Y9cnOdKdZP" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
-    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

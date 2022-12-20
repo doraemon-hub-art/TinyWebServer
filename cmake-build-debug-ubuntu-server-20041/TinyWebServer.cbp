@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="TinyWebServer"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TinyWebServer">
+				<Option output="/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/TinyWebServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/mysql"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 TinyWebServer"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TinyWebServer/fast">
+				<Option output="/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/TinyWebServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/mysql"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 TinyWebServer/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/block_queue/block_queue.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/buffer/buffer.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/buffer/buffer.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/epoller/epoller.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/epoller/epoller.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/heap_timer/heap_timer.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/heap_timer/heap_timer.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/http/http_conn/http_conn.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/http/http_conn/http_conn.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/http/http_request/http_request.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/http/http_request/http_request.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/http/http_response/http_response.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/http/http_response/http_response.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/log/log.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/log/log.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/main.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/server/server.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/server/server.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/sql_conn_pool/sql_conn_pool.cpp">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/sql_conn_pool/sql_conn_pool.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/sql_conn_pool/sql_conn_raii.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/thread_pool/thread_pool.h">
+			<Option target="TinyWebServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Y9cnOdKdZP/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

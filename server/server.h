@@ -15,7 +15,6 @@
 
 #include "../epoller/epoller.h"
 #include "../log/log.h"
-#include "../log/log.h"
 #include "../heap_timer/heap_timer.h"
 #include "../thread_pool/thread_pool.h"
 #include "../sql_conn_pool/sql_conn_raii.h"
