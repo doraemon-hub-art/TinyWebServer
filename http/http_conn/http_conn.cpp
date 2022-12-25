@@ -35,7 +35,7 @@ void http_conn::init(int sock_fd, const sockaddr_in &addr) {
 }
 
 void http_conn::close_conn() {
-    m_response.unmap_file();// 接触文件映射
+    m_response.unmap_file();// 解除文件映射
     if(!m_is_close){// 是否已经关闭
         m_is_close = true;
         m_user_count--;
@@ -61,7 +61,7 @@ int http_conn::get_port() const {
 }
 
 ssize_t http_conn::read(int *save_errno) {
-    ssize_t  len = -1;
+    ssize_t len = -1;
     // 感觉这里面应该是+=，因为可能要读取很多次，先做个标记，暂时先不考虑。
     do{
         len = m_read_buffer.read_fd(m_fd,save_errno);
@@ -83,8 +83,11 @@ ssize_t http_conn::write(int *save_errno) {
         if(m_iov[0].iov_len + m_iov[1].iov_len == 0) {// 空了，传输完成了
             break;
         }else if(static_cast<size_t>(len) > m_iov[0].iov_len){// m_iov[0]中的内容已经读完了，从m_iov[1]中继续读
-            m_iov[1].iov_base = (uint8_t*)m_iov[0].iov_base + (len - m_iov[0].iov_len);// 更新读取位置
+
+            m_iov[1].iov_base = (uint8_t*)m_iov[1].iov_base + (len - m_iov[0].iov_len);// 更新读取位置
+
             m_iov[1].iov_len -= (len-m_iov[0].iov_len);
+
             if(m_iov[0].iov_len){// 非空
                 m_write_buffer.retrieve_all();
                 m_iov[0].iov_len = 0;
@@ -100,6 +103,7 @@ ssize_t http_conn::write(int *save_errno) {
 
 bool http_conn::process() {
     m_request.init();
+
     if(m_read_buffer.read_able_bytes() <= 0){//
         return false;
     }else if(m_request.parse(m_read_buffer)){// 解析请求

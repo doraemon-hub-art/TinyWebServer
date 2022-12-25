@@ -120,7 +120,7 @@ void http_response::add_header(buffer &buff) {
 }
 
 void http_response::add_content(buffer &buff) {
-    int  src_fd = open((m_src_dir+m_path).data(),O_RDONLY);// 打开对应为文件
+    int src_fd = open((m_src_dir+m_path).data(),O_RDONLY);// 打开对应为文件
     if(src_fd < 0){// 没找到对应文件
         error_content(buff,"File Not Found!");
         return;
@@ -138,7 +138,7 @@ void http_response::add_content(buffer &buff) {
 
     m_mmfile = (char*)mm_ret;
     close(src_fd);// 映射到内存中了，将文件关闭
-    buff.append("Content-length "+ std::to_string(m_mmfile_stat.st_size) + "\r\n\r\n");
+    buff.append("Content-length: "+ std::to_string(m_mmfile_stat.st_size) + "\r\n\r\n");
 }
 
 int http_response::code() const {
@@ -169,8 +169,9 @@ void http_response::error_content(buffer &buff, std::string message) {
     std::string body;
     std::string status;
 
-    body += "<html><titile>Error</title>";
+    body += "<html><title>Error</title>";
     body += "<body bgcolor=\"ffffff\">";
+
     if(m_code_status.count(m_code == 1)){
         status = m_code_status.find(m_code)->second;
     }else{// 不存在此状态码
