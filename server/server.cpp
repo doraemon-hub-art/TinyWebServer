@@ -10,7 +10,7 @@ server::server(int port, int trig_mode, int timeout_ms, bool opt_linger, int sql
         false),m_timer(new heap_timer()),m_thread_pool(new thread_pool(thread_num)),m_epoller(new epoller()){
 
     m_src_dir = getcwd(nullptr,256);// 获取当前程序的工作路径
-    std::cout<<m_src_dir<<std::endl;
+    //std::cout<<m_src_dir<<std::endl;
     assert(m_src_dir);
     strncat(m_src_dir,"/resources/",16);// 追加/resources/
     http_conn::m_user_count = 0;// 当前用户初始化为0
@@ -88,12 +88,12 @@ void server::start() {
             if(fd == m_listen_fd){// 监听socket上的时间，
                 deal_listen();
             }else if(event & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)){// 错误事件
-                assert(m_users.count(fd) > 0);
+                assert(m_users.count(fd) > 0);// 存在这个连接
                 close_conn(&m_users[fd]);
             }else if(event & EPOLLIN){// 读事件
                 assert(m_users.count(fd) > 0);
                 deal_read(&m_users[fd]);
-            }else if(event | EPOLLOUT){// 写事件
+            }else if(event & EPOLLOUT){// 写事件
                 assert(m_users.count(fd) > 0);
                 deal_write(&m_users[fd]);
             }else{
@@ -205,6 +205,7 @@ void server::on_write(http_conn *client) {
             return ;
         }
     }
+    close_conn(client);// 出现错误，关闭连接
 }
 
 bool server::init_socket() {

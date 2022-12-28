@@ -18,6 +18,7 @@ void heap_timer::swap_node(size_t i, size_t j) {
     assert( j >= 0 && j < m_heap.size());
     // 交换
     std::swap(m_heap[i],m_heap[j]);
+    // 哈希映射
     m_ref[m_heap[i].fd] = i;
     m_ref[m_heap[j].fd] = j;
 }
@@ -26,6 +27,7 @@ void heap_timer::sift_up(size_t i) {
     assert( i >= 0 && i < m_heap.size());// 范围是否合法
 
     size_t j = (i - 1) / 2;// 父结点
+
     while ( j >= 0 ){
         if(m_heap[j] < m_heap[i]){// 父结点已经小于当前结点了，终止
             break;
@@ -60,7 +62,7 @@ bool heap_timer::sift_down(size_t index, size_t n) {
 }
 
 void heap_timer::add(int fd, int timeout, const  TIME_OUT_CALl_BACK & cb) {
-    assert( fd > 0);// 合法
+    assert( fd >= 0);// 合法
 
     size_t i;// 数组中索引
     if(m_ref.count(fd) == 0){// 不存在该定时器
@@ -75,6 +77,7 @@ void heap_timer::add(int fd, int timeout, const  TIME_OUT_CALl_BACK & cb) {
         // 当前时间+一个时间长度ms
         m_heap[i].expires = CLOCK::now() + MS(timeout);//
         m_heap[i].cb = cb;
+        // 先向下调整，失败则向上调整
         if(!sift_down(i,m_heap.size())){// 参数控制范围待确定
             sift_up(i);
         }
@@ -99,6 +102,7 @@ void heap_timer::del(size_t index) {
 
     size_t n = m_heap.size() - 1;// 最后一个定时器的下标
     assert(index <= n);
+
     if(index < n){
         swap_node(index,n);
         // 这里传n好像错了，应该是n+1，没传错应该。
@@ -156,7 +160,7 @@ int heap_timer::get_next_tick() {
     if(!m_heap.empty()){// 堆数组非空
         // 毫秒差
         res = std::chrono::duration_cast<MS>(m_heap.front().expires - CLOCK::now()).count();
-        if(res < 0){
+        if(res < 0){// 已经超时
             res = 0;
         }
     }

@@ -4,13 +4,13 @@
 
 #include "sql_conn_pool.h"
 
-sql_conn_pool::~sql_conn_pool() {
-    close_pool();// 关闭连接池
-}
-
 sql_conn_pool::sql_conn_pool() {
     m_user_count = 0;
     m_free_count = 0;
+}
+
+sql_conn_pool::~sql_conn_pool() {
+    close_pool();// 关闭连接池
 }
 
 sql_conn_pool* sql_conn_pool::instance() {

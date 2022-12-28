@@ -27,7 +27,7 @@ private:
     // 数据库链接
     MYSQL* m_sql;
 
-    // 数据库连接池
+    // 数据库连接池-保存下来用于释放
     sql_conn_pool* m_conn_pool;
 };
 
