@@ -1,3 +1,0 @@
-/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/CMakeFiles/TinyWebServer.dir
-/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/CMakeFiles/edit_cache.dir
-/tmp/tmp.Y9cnOdKdZP/cmake-build-debug-ubuntu-server-20041/CMakeFiles/rebuild_cache.dir

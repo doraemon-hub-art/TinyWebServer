@@ -247,7 +247,7 @@ bool http_request::user_verify(const std::string &name, const std::string &pwd, 
 
     // 注册——执行条件，注册 && flag == true
     if(!is_login && flag == true){
-        LOG_DEBUG("register!");
+        LOG_DEBUG("regirster!");
         bzero(order,256);
         snprintf(order,256,"INSERT INTO user(username, password) VALUES('%s','%s')",
                  name.c_str(),pwd.c_str());
