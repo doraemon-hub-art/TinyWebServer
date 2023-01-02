@@ -11,7 +11,6 @@ int main() {
 
     // 数据库端口3306
     // WebServer服务器开放端口9006
-    // 调试8
     server webserver(
             9006,3,60000, false,// 端口，fd模式，超时时间，优雅退出
             3306,"root","zyx020806","webserver",// mysql配置
