@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f995cd51-287e-4e91-90e1-fd34a039e6e8" name="ubuntu 20.04.1">
+        <fileTransfer rootFolder="/home/xuanxuan" accessType="SFTP" host="192.168.10.130" port="22" sshConfigId="053bbd05-3b86-490c-9902-6112b37cee9b" sshConfig="xuanxuan@192.168.10.130:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

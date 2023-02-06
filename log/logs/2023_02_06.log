@@ -1,0 +1,60 @@
+2023-02-06 04:06:40.495513 [info] : ========== Server init ==========
+2023-02-06 04:06:40.495537 [info] : Port:9006, OpenLinger: false
+2023-02-06 04:06:40.495542 [info] : Listen Mode: ET, OpenConn Mode: ET
+2023-02-06 04:06:40.495545 [info] : LogSys level: 1
+2023-02-06 04:06:40.495547 [info] : srcDir: /home/xuanxuan/my_files/TinyWebServer/resources/
+2023-02-06 04:06:40.495604 [info] : SqlConnPool num: 12, ThreadPool num: 6
+2023-02-06 04:06:40.495609 [info] : ========== Server start ==========
+2023-02-06 04:06:45.720096 [info] : Client[18](192.168.10.1:65480) in,current userCount:1
+2023-02-06 04:06:45.720272 [info] : Client[18] in!
+2023-02-06 04:06:45.720310 [info] : Client[19](192.168.10.1:713) in,current userCount:2
+2023-02-06 04:06:45.720332 [info] : Client[19] in!
+2023-02-06 04:06:45.723403 [info] : verify name:test pwd:123
+2023-02-06 04:06:45.741771 [error]: RequestLine Error
+2023-02-06 04:06:45.742203 [info] : Client[18] quit!
+2023-02-06 04:06:45.742368 [info] : Client[18](192.168.10.1:65480) quit,current userCount:1
+2023-02-06 04:06:45.753133 [info] : Client[18](192.168.10.1:969) in,current userCount:2
+2023-02-06 04:06:45.753277 [info] : Client[18] in!
+2023-02-06 04:06:45.753492 [info] : Client[20](192.168.10.1:1225) in,current userCount:3
+2023-02-06 04:06:45.753527 [info] : Client[20] in!
+2023-02-06 04:06:45.754501 [info] : Client[21](192.168.10.1:1481) in,current userCount:4
+2023-02-06 04:06:45.754585 [info] : Client[21] in!
+2023-02-06 04:06:45.754633 [info] : Client[22](192.168.10.1:1737) in,current userCount:5
+2023-02-06 04:06:45.754652 [info] : Client[22] in!
+2023-02-06 04:06:45.762042 [info] : Client[23](192.168.10.1:1993) in,current userCount:6
+2023-02-06 04:06:45.762279 [info] : Client[23] in!
+2023-02-06 04:07:45.844965 [info] : Client[20] quit!
+2023-02-06 04:07:45.845158 [info] : Client[20](192.168.10.1:1225) quit,current userCount:5
+2023-02-06 04:07:45.845190 [info] : Client[21] quit!
+2023-02-06 04:07:45.845262 [info] : Client[21](192.168.10.1:1481) quit,current userCount:4
+2023-02-06 04:07:45.845287 [info] : Client[23] quit!
+2023-02-06 04:07:45.845383 [info] : Client[23](192.168.10.1:1993) quit,current userCount:3
+2023-02-06 04:07:45.845408 [info] : Client[22] quit!
+2023-02-06 04:07:45.845469 [info] : Client[22](192.168.10.1:1737) quit,current userCount:2
+2023-02-06 04:07:45.845493 [info] : Client[18] quit!
+2023-02-06 04:07:45.845571 [info] : Client[18](192.168.10.1:969) quit,current userCount:1
+2023-02-06 04:07:45.845596 [info] : Client[19] quit!
+2023-02-06 04:07:45.845662 [info] : Client[19](192.168.10.1:713) quit,current userCount:0
+2023-02-06 04:10:26.550492 [info] : Client[18](192.168.10.1:61386) in,current userCount:1
+2023-02-06 04:10:26.550574 [info] : Client[18] in!
+2023-02-06 04:10:26.550610 [info] : Client[19](192.168.10.1:61642) in,current userCount:2
+2023-02-06 04:10:26.550633 [info] : Client[19] in!
+2023-02-06 04:10:26.566578 [info] : Client[20](192.168.10.1:62154) in,current userCount:3
+2023-02-06 04:10:26.566642 [info] : Client[20] in!
+2023-02-06 04:10:26.567799 [info] : Client[21](192.168.10.1:62410) in,current userCount:4
+2023-02-06 04:10:26.567859 [info] : Client[21] in!
+2023-02-06 04:10:26.568764 [info] : Client[22](192.168.10.1:62666) in,current userCount:5
+2023-02-06 04:10:26.568793 [info] : Client[22] in!
+2023-02-06 04:10:26.570326 [info] : Client[23](192.168.10.1:62922) in,current userCount:6
+2023-02-06 04:10:26.570558 [info] : Client[23] in!
+2023-02-06 04:10:36.547898 [info] : verify name:test pwd:123
+2023-02-06 04:10:36.548969 [error]: RequestLine Error
+2023-02-06 04:10:36.549225 [info] : Client[18] quit!
+2023-02-06 04:10:36.549347 [info] : Client[18](192.168.10.1:61386) quit,current userCount:5
+2023-02-06 04:10:36.563911 [info] : Client[18](192.168.10.1:1995) in,current userCount:6
+2023-02-06 04:10:36.563970 [info] : Client[18] in!
+2023-02-06 04:10:43.043681 [info] : verify name:test1 pwd:123
+2023-02-06 04:10:43.046093 [error]: RequestLine Error
+2023-02-06 04:10:43.046385 [info] : Client[22] quit!
+2023-02-06 04:10:43.046626 [info] : Client[22](192.168.10.1:62666) quit,current userCount:5
+2023-02-06 04:10:43.062250 [info] : Client[22](192.168.10.1:3787) in,current userCount:6
