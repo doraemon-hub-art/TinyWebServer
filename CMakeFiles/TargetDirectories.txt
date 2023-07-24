@@ -1,3 +1,0 @@
-/home/xuanxuan/my_files/TinyWebServer/CMakeFiles/TinyWebServer.dir
-/home/xuanxuan/my_files/TinyWebServer/CMakeFiles/edit_cache.dir
-/home/xuanxuan/my_files/TinyWebServer/CMakeFiles/rebuild_cache.dir
